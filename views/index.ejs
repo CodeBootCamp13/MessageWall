@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>And now... WonderWall</title>
+	<link rel="stylesheet" href="/css/wall.css">
+	<script type="text/javascript" src="/js/wall.js" defer></script>
+</head>
+<body>
+	<h1>MessageWall. Leave a message after the beep...</h1>
+
+	<div class="container">
+
+		<div class="form">
+			<form action="/" method="post">
+				<input type="text" name="user" id="user" value="" placeholder="Your nickname">
+				<input type="text" name="message" id="message" autocomplete="off" placeholder="Your message">
+				<input type="submit" value="Post">
+			</form>
+		</div>
+
+		<div class="messages">
+			<%- messages.length ? `<h3>${messages.length} Messages</h3>` : '' %>
+			<ol>
+			<% 
+			if ( messages.length ) { 
+				for ( let i = 0; i < messages.length; i++ ) {
+			%>
+				<li>
+					<strong><%= messages[i].user %></strong> wrote: 
+					<div class="message"><%= messages[i].message %></div>
+				</li>
+			<%		
+				}
+			} else {
+			%>
+				<li>
+					<em>Believe it or not, Eric isn't home...<br> 
+						please leave a message... <br>
+						at the beep.<br>
+						I must be out, or I'd pick up the phone...<br>
+						Where could I be???<br>
+						Believe it or not... I'm not home!
+					</em>
+				</li>
+			<%	
+			}
+			%> 
+			</ol>
+		</div>
+
+	</div>
+</body>
+</html>

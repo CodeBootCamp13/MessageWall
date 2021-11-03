@@ -1,0 +1,48 @@
+body {
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	background-color: mediumaquamarine;
+}
+
+h1 {
+	margin: 5px auto;
+	width: 70vw;
+	padding: 0;
+}
+
+.container {
+	background-color: mediumseagreen;
+	padding: 0;
+	margin: 5px auto;
+	width: 70vw;
+	border: 2px solid darkolivegreen;
+	border-radius: 10px;
+}
+
+.messages,
+.form {
+	margin: 10px 30px;
+}
+
+.form input {
+	font-size: 18px;
+}
+
+.form input[name=user] {
+	width: 10vw;
+}
+
+.form input[name=message] {
+	width: 30vw;
+}
+
+.form input[type=submit] {
+	background-color: darkolivegreen;
+	color: #fff;
+	width: 5vw;
+}
+
+div.message {
+	border: 1px solid olivedrab;
+	padding: 5px;
+	background-color: rgb(194, 231, 202);
+}
